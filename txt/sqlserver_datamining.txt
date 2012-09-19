@@ -1,0 +1,84 @@
+Data mining is getting more and more attention in today’s business organizations.
+You may often hear people saying, “we should segment our customers
+using data mining tools,” “data mining will increase customer satisfaction,” or
+even “our competitors are using data mining to gain market share — we
+need to catch up!”
+So, what is data mining and what benefits will using it bring you? How can
+you leverage this technology to solve your daily business problems? What are
+the technologies behind data mining? What is the life cycle of a typical data
+mining project? In this chapter, we will answer all these questions and give
+you an extended introduction to the data mining world.
+In this chapter, you will learn about:
+A definition of data mining
+Determining which business problems can be solved with data mining
+Data mining tasks
+Using various data mining techniques
+Data mining flow
+The data mining project life cycle
+Current data mining standards
+A few new trends in data mining
+Introduction to
+Data Mining
+CHAPTER 1
+What Is Data Mining
+Data mining is a key member in the Business Intelligence (BI) product family,
+together with Online Analytical Processing (OLAP), enterprise reporting
+and ETL.
+Data mining is about analyzing data and finding hidden patterns using automatic
+or semiautomatic means. During the past decade, large volumes of data
+have been accumulated and stored in databases. Much of this data comes from
+business software, such as financial applications, Enterprise Resource Management
+(ERP), Customer Relationship Management (CRM), and Web logs. The
+result of this data collection is that organizations have become data-rich and
+knowledge-poor. The collections of data have become so vast and are increasing
+so rapidly in size that the practical use of these stores of data has become
+limited. The main purpose of data mining is to extract patterns from the data at
+hand, increase its intrinsic value and transfer the data to knowledge.
+You may wonder, why can’t we dig out the knowledge by using SQL queries?
+In other words, you may wonder what the fundamental differences between
+data mining and relational database technologies are. Let’s have a look of the following
+example.
+Figure 1.1 displays a relational table containing a list of high school graduates.
+The table records information such as gender, IQ, the level of parental
+encouragement, and the parental income of each student along with that student’s
+intention to attend college. Someone asks you a question: What drives
+high school graduates to attend college?
+You may write a query to find out how many male students attend college
+versus how many female students do. You may also write a query to determine
+the impact of the Parent Encouragement column. But what about male students
+who are encouraged by their parents? Or female students who are not encouraged
+by their parents? You would need to write hundreds of these queries to
+cover all the possible combinations. Data in numerical forms, such as that in Parent
+Income or IQ, is even more difficult to analyze. You would need to choose
+arbitrary ranges in these numeric values. What if there are hundreds of columns
+in your table? You would quickly end up with an impossible to manage number
+of SQL queries to answer a basic question about the meaning of your data.
+In contrast, the data mining approach to this question is rather simple. All
+you need to do is select the right data mining algorithm and specify the column
+usage, meaning the input columns and the predictable columns (which
+are the targets for the analysis). A decision tree model would work well to
+determine the importance of parental encouragement in a student’s decision
+to continue to college. You would select IQ, Gender, Parent Income, and Parent
+Encouragement as the input columns and College Plans as the predictable column.
+As the decision tree algorithm scans the data, it analyzes the impact of
+2 Chapter 1
+each input attribute related to the target and selects the most significant
+attribute to split. Each split divides the dataset into two subsets so that the
+value distribution of CollegePlans is as different as possible among these two
+subsets. This process is repeated recursively on each subset until the tree is
+completely built. Once the training process is complete, you can view the discovered
+patterns by browsing the tree.
+Figure 1.2 shows a decision tree for the College Plan dataset. Each path from
+the root node to a leaf node forms a rule. Now, we can say that students with
+an IQ greater than 100 and who are encouraged by their parents have a 94%
+probability of attending college. We have extracted knowledge from the data.
+As exemplified in Figure 1.2, data mining applies algorithms, such as decision
+trees, clustering, association, time series, and so on, to a dataset and analyzes its
+contents. This analysis produces patterns, which can be explored for valuable
+information. Depending on the underlying algorithm, these patterns can be in
+the form of trees, rules, clusters, or simply a set of mathematical formulas. The
+information found in the patterns can be used for reporting, as a guide to marketing
+strategies, and, most importantly, for prediction. For example, based on
+the rules produced by the previous decision tree, you can predict with significant
+accuracy whether high school students who are not represented in the original
+dataset will attend college.

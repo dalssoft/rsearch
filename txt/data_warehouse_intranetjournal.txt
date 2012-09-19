@@ -1,0 +1,52 @@
+A Definition of Data Warehousing
+
+By Michael Reed of
+
+ 
+
+The data warehousing market consists of tools, technologies, and methodologies that allow for the construction, usage, management, and maintenance of the hardware and software used for a data warehouse, as well as the actual data itself. Surveys indicate Data Warehousing will be the single largest IT initiative after completion of Y2K efforts. Data warehousing is currently a $28 Billion market (Source: Data Warehousing Institute) and we estimate 20% growth per annum through at least 2002.Two of the pioneers in the field were Ralph Kimball and Bill Inmon. Biographies of these two individuals have been provided, since many of the terms discussed in this paper were coined and concepts defined by them.
+
+In order to clear up some of the confusion that is rampant in the market, here are some definitions:
+Data Warehouse:
+
+The term Data Warehouse was coined by Bill Inmon in 1990, which he defined in the following way: "A warehouse is a subject-oriented, integrated, time-variant and non-volatile collection of data in support of management's decision making process". He defined the terms in the sentence as follows:
+Subject Oriented:
+
+Data that gives information about a particular subject instead of about a company's ongoing operations.
+Integrated:
+
+Data that is gathered into the data warehouse from a variety of sources and merged into a coherent whole.
+Time-variant:
+
+All data in the data warehouse is identified with a particular time period.
+Non-volatile
+
+Data is stable in a data warehouse. More data is added but data is never removed. This enables management to gain a consistent picture of the business.
+
+(Source: "What is a Data Warehouse?" W.H. Inmon, Prism, Volume 1, Number 1, 1995).
+
+This definition remains reasonably accurate almost ten years later. However, a single-subject data warehouse is typically referred to as a data mart, while data warehouses are generally enterprise in scope. Also, data warehouses can be volatile. Due to the large amount of storage required for a data warehouse, (multi-terabyte data warehouses are not uncommon), only a certain number of periods of history are kept in the warehouse. For instance, if three years of data are decided on and loaded into the warehouse, every month the oldest month will be "rolled off" the database, and the newest month added.
+
+Ralph Kimball provided a much simpler definition of a data warehouse. As stated in his book, "The Data Warehouse Toolkit", on page 310, a data warehouse is "a copy of transaction data specifically structured for query and analysis". This definition provides less insight and depth than Mr. Inmon's, but is no less accurate.
+
+
+
+Data warehousing is essentially what you need to do in order to create a data warehouse, and what you do with it. It is the process of creating, populating, and then querying a data warehouse and can involve a number of discrete technologies such as:
+
+Onto Page Two...
+The Author
+
+Michael Reed is a Research Director, Data Warehousing with TechnologyEvaluation.com. In this role Mr. Reed manages all of the research, project management and data modeling for Data Warehousing products.
+
+ 
+
+Biographical Information
+
+Bill Inmon
+
+Bill Inmon is universally recognized as the "father of the data warehouse." He has over 26 years of database technology management experience and data warehouse design expertise, and has published 36 books and more than 350 articles in major computer journals. His books have been translated into nine languages. He is known globally for his seminars on developing data warehouses and has been a keynote speaker for every major computing association. Before founding Pine Cone Systems, Bill was a co-founder of Prism Solutions, Inc.
+Back to the top...
+
+Ralph Kimball
+
+Ralph Kimball was co-inventor of the Xerox Star workstation, the first commercial product to use mice, icons, and windows. He was vice president of applications at Metaphor Computer Systems, and founder and CEO of Red Brick Systems. He has a Ph.D. from Stanford in electrical engineering, specializing in man-machine systems. Ralph is a leading proponent of the dimensional approach to designing large data warehouses. He currently teaches data warehousing design skills to IT groups, and helps selected clients with specific data warehouse designs. Ralph is a columnist for Intelligent Enterprise magazine and has a relationship with Sagent Technology, Inc., a data warehouse tool vendor. His book "The Data Warehouse Toolkit" is widely recognized as the seminal work on the subject.

@@ -1,0 +1,239 @@
+Data mining
+From Wikipedia, the free encyclopedia
+Jump to: navigation, search
+
+Data mining is the process of sorting through large amounts of data and picking out relevant information. It is normally used by large corporations employing Business Intelligence integrated with an ERP system to help make managerial decisions based on the patterns and forecasts generated from the data collected. It has been described as "the nontrivial extraction of implicit, previously unknown, and potentially useful information from data"[1] and "the science of extracting useful information from large data sets or databases."[2]
+
+Data mining in relation to enterprise resource planning is the statistical and logical analysis of large sets of transaction data, looking for patterns that can aid decision making.[3]
+Contents
+[hide]
+
+    * 1 Background
+    * 2 Algorithms
+    * 3 Privacy concerns
+    * 4 Ethical Theories and Policy
+    * 5 The Law
+    * 6 Notable uses of data mining
+          o 6.1 Combating terrorism
+          o 6.2 Games
+          o 6.3 Business
+          o 6.4 Science and engineering
+    * 7 See also
+    * 8 References
+    * 9 Further reading
+    * 10 External links
+
+[edit] Background
+
+Traditionally, business analysts have performed the task of extracting useful information from recorded data, but the increasing volume of data in modern business and science calls for computer-based approaches. As data sets have grown in size and complexity, there has been a shift away from direct hands-on data analysis toward indirect, automatic data analysis using more complex and sophisticated tools.Major improvements in computer technology has aided data collection.However, the captured data needs to be converted into information and knowledge to become useful. Data mining is the entire process of applying computer-based methodology, including new techniques for knowledge discovery, to data.[4]
+
+Data mining identifies trends within data that go beyond simple analysis. Through the use of sophisticated algorithms, non-statistician users have the opportunity to identify key attributes of business processes and target opportunities. However, abdicating control of this process from the statistician to the machine may result in false-positives or no useful results at all.
+
+Although data mining is a relatively new term, the technology is not. For many years, businesses have used powerful computers to sift through volumes of data such as supermarket scanner data to produce market research reports (although reporting is not always considered to be data mining). Continuous innovations in computer processing power, disk storage, and statistical software are dramatically increasing the accuracy and usefulness of data analysis.
+
+The term data mining is often used to apply to the two separate processes of knowledge discovery and prediction. Knowledge discovery provides explicit information that has a readable form and can be understood by a user (e.g., association rule mining). Forecasting, or predictive modeling provides predictions of future events and may be transparent and readable in some approaches (e.g., rule-based systems) and opaque in others such as neural networks. Moreover, some data-mining systems such as neural networks are inherently geared towards prediction and pattern recognition, rather than knowledge discovery.
+
+Metadata, or data about a given data set, are often expressed in a condensed data-minable format, or one that facilitates the practice of data mining. Common examples include executive summaries and scientific abstracts.
+
+Data mining relies on the use of real world data. These data are extremely vulnerable to collinearity precisely because data from the real world may have unknown interrelations. An unavoidable weakness of data mining is that the critical data that may expose any relationship might have never been observed. Alternative approaches using an experiment-based approach such as Choice Modelling for human-generated data may be used. Inherent correlations are either controlled for or removed altogether through the construction of an experimental design.
+
+Recently, there were some efforts to define a standard for data mining, for example the CRISP-DM standard for analysis processes or the Java Data-Mining Standard. Independent of these standardization efforts, freely available open-source software systems like RapidMiner and Weka have become an informal standard for defining data-mining processes. Data
+
+Data are any facts, numbers, or text that can be processed by a computer. Today, organizations are accumulating vast and growing amounts of data in different formats and different databases. This includes:
+
+   * operational or transactional data such as, sales, cost, inventory, payroll, and accounting
+
+   * nonoperational data, such as industry sales, forecast data, and macro economic data 
+
+   * meta data - data about the data itself, such as logical database design or data dictionary definitions
+
+[edit] Algorithms
+
+There are various data mining algorithms which can be used to build the mining model. But choosing the right algorithm for the right business task is critical. Different algorithms can be used to do the same business tasks but each algorithm produces different results.[5]
+
+The various types of algorithms are as follows
+
+• Classification algorithm predicts one or more discrete variables, based on the other attributes in the dataset. [6] eg: Microsoft Decision Trees Algorithm.
+
+• Regression algorithm predicts one or more continuous variables, such as profit or loss, based on other attributes in the dataset. [7] eg: Microsoft Time Series Algorithm.
+
+• Segmentation algorithm divides data into groups, or clusters, of items that have similar properties. [8] eg: Microsoft Clustering Algorithm.
+
+• Association algorithm finds correlations between different attributes in a dataset. The most common application of this kind of algorithm is for creating association rules, which can be used in a market basket analysis. [9] eg: Microsoft Association Algorithm.
+
+• Sequence analysis algorithm summarizes frequent sequences or episodes in data, such as a Web path flow. [10] eg: Microsoft Sequence Clustering Algorithm.
+
+A data mining application can adopt different algorithms for different functions, for example we can use segmentation algorithms for exploring data and regression algorithms for prediction functionalities.
+
+[edit] Privacy concerns
+
+There are also privacy and human rights concerns associated with data mining, specifically regarding the source of the data analyzed. Data mining provides information that may be difficult to obtain otherwise. When the data collected involves individual people, there are many questions concerning privacy, legality, and ethics.[11] In particular, data mining government or commercial data sets for national security or law enforcement purposes, such as in the Total Information Awareness Program, has raised privacy concerns.[12][13]
+
+The following facts have increased the urgency and difficulty regarding data mining and protecting the privacy of the individuals about whom the data was collected: the decreased cost of data mining tools and the prevalence of those tools, an increase in the amount of data being collected and stored, an increase in the use of data aggregation, and the use of data warehouses as the stores for the data from several sources [14].
+
+“Data mining by itself is ethically neutral” [15]. There are several ethical issues which are raised by the topic of data mining: “the suitability and validity of the methods used in any given data mining application, the degree to which confidentiality and privacy obligations are respected, and the overall aims of a given data mining application” [16].
+
+One must take into consideration the reliability of the source of the data which is being mined, the reason that the data was collected originally, and any aggregation that has taken place [17]. A danger which is inherent to data mining projects is the possibility of erroneous information resulting from data aggregation. Data aggregation is when the data which has been mined, possibly from various sources, has been put together so that it can be analyzed [18]. The danger occurs when the summarized data paints an untrue picture of things. This can lead to a company taking improper actions which could be detrimental to the prosperity of the company [19]. The threat to an individual’s privacy comes into play when the data, once compiled, causes the data miner to be able to identify specific individuals, especially when originally the data was anonymous [20]. Aggregating data from multiple sources allows profiles of individuals to be created [21]. In order for the information derived from the data that is mined to be meaningful one must assume that the data which is in the repository is accurate and complete. In addition, one must assume that the analysis was done in a way that would produce a reliable result [22]. A common saying is “garbage in garbage out” meaning if the data that is input into your repository is of poor quality, your analysis, or output, will also be of poor quality [23].
+
+The steps that may be taken in order to protect your customers, from whom you are collecting data, and your company are to specify the purpose of the data collection and any data mining projects, how the data will be used, who will be able to mine the data and use it, the security surrounding access to the data, and in addition, to provide a way for individuals to update data which was collected from them [24]. This also assists in ensuring the data is accurate. One may additionally modify the data so that it is anonymous so that individuals may not be readily identified [25].
+
+
+[edit] Ethical Theories and Policy
+
+In today’s business world a company using data mining needs to develop a policy regarding their practices and the implications on ethics. Most common policies can be derived from three distinct ethical theories. These theories include the utilitarian theory, deontological theory, and the natural rights theory.
+
+The utilitarian theory is taken from the utilitarianism view, a view always looking at the consequences of the action performed. Therefore, an acceptable data mining practice under the utilitarian theory is one that satisfies customers’ needs and happiness.
+
+The next theory is the deontological theory. This theory focuses on the duties and responsibilities that a company has towards their customers. The deontological theory requires companies to be forthright about their actions involving the uses of customer information.
+
+The final theory is the natural rights theory. The natural rights theory is one that focuses on the natural rights (life, liberty, property, and privacy) of a company’s customers. If a company uses this theory, customers will feel more comfortable about information that companies collect from them.
+
+Following any one or a mixture of these theories will give a company ethical guidelines in the use of their data mining practices. It should be noted that although these theories are commonly used, they are not the only concepts available. [26]
+
+
+[edit] The Law
+
+There are many laws formulated by the US government to protect people from losing their privacy. Interestingly there are certain laws enabling the government to invade privacy, they are as follows
+
+
+adapted from (John Wang, 2003) [27]
+
+
+ACT:Foreign Intelligence Surveillance Act (FISA)
+YEAR: 1978
+DESCRIPTION:Provides law enforcement agencies with special authority when investigating terrorism or espionage
+
+ACT:Communications Assistance for Law Enforcement Act (CALEA)
+YEAR:1994
+DESCRIPTION:Guarantees law enforcement agencies with access to telecommunication carrier’s network
+
+ACT:USA Patriot Act
+YEAR:2001
+DESCRIPTION:Enacted as a result of September 11 attacks on the world trade center and was signed by President Bush on Oct 26, 2001. Greatly expands the right of law enforcement officials to wiretap the web, including information transmitted over the internet, corporate in-house networks voice mails systems. It also lets them search stored e-mail and voice mails to collect evidence that may be useful in prosecuting criminals, including terrorists [28][clarify]
+
+[edit] Notable uses of data mining
+
+[edit] Combating terrorism
+
+It has been suggested that both the Central Intelligence Agency and the Canadian Security Intelligence Service have employed this method.[29][clarify]
+
+
+Previous data mining to stop terrorist programs under the U.S. government include the Total Information Awareness (TIA) program, Computer-Assisted Passenger Prescreening System (CAPPS II), Analysis, Dissemination, Visualization, Insight, and Semantic Enhancement (ADVISE), Multistate Anti-Terrorism Information Exchange (MATRIX), and the Secure Flight program.[30] These programs have been discontinued due to controversy over whether they violate the US Constitution's 4th amendment, although many programs that were formed under them continue to be funded by different organizations, or under different names, to this day. Two plausible data mining techniques in the context of combatting terrorism include pattern mining and subject-based data mining.
+
+[edit] Games
+
+Since the early 1960s, with the availability of oracles for certain combinatorial games, also called tablebases (e.g. for 3x3-chess) with any beginning configuration, small-board dots-and-boxes, small-board-hex, and certain endgames in chess, dots-and-boxes, and hex; a new area for data mining has been opened up. This is the extraction of human-usable strategies from these oracles. Current pattern recognition approaches do not seem to fully have the required high level of abstraction in order to be applied successfully. Instead, extensive experimentation with the tablebases, combined with an intensive study of tablebase-answers to well designed problems and with knowledge of prior art, i.e. pre-tablebase knowledge, is used to yield insightful patterns. Berlekamp in dots-and-boxes etc. and John Nunn in chess endgames are notable examples of researchers doing this work, though they were not and are not involved in tablebase generation.
+
+[edit] Business
+
+Data mining in customer relationship management applications can contribute significantly to the bottom line.[citation needed] Rather than contacting a prospect or customer through a call center or sending mail, only prospects that are predicted to have a high likelihood of responding to an offer are contacted. More sophisticated methods may be used to optimize across campaigns so that we can predict which channel and which offer an individual is most likely to respond to - across all potential offers. Finally, in cases where many people will take an action without an offer, uplift modeling can be used to determine which people will have the greatest increase in responding if given an offer. Data clustering can also be used to automatically discover the segments or groups within a customer data set.
+
+Businesses employing data mining may see a return on investment, but also they recognize that the number of predictive models can quickly become very large. Rather than one model to predict which customers will churn, a business could build a separate model for each region and customer type. Then instead of sending an offer to all people that are likely to churn, it may only want to send offers to customers that will likely take to offer. And finally, it may also want to determine which customers are going to be profitable over a window of time and only send the offers to those that are likely to be profitable. In order to maintain this quantity of models, they need to manage model versions and move to automated data mining.
+
+Data mining can also be helpful to human-resources departments in identifying the characteristics of their most successful employees. Information obtained, such as universities attended by highly successful employees, can help HR focus recruiting efforts accordingly. Additionally, Strategic Enterprise Management applications help a company translate corporate-level goals, such as profit and margin share targets, into operational decisions, such as production plans and workforce levels.[3]
+
+Another example of data mining, often called the market basket analysis, relates to its use in retail sales. If a clothing store records the purchases of customers, a data-mining system could identify those customers who favour silk shirts over cotton ones. Although some explanations of relationships may be difficult, taking advantage of it is easier. The example deals with association rules within transaction-based data. Not all data are transaction based and logical or inexact rules may also be present within a database. In a manufacturing application, an inexact rule may state that 73% of products which have a specific defect or problem will develop a secondary problem within the next six months.
+
+Data Mining is a highly effective tool in the catalog marketing industry. Catalogers have a rich history of customer transactions on millions of customers dating back several years. Data mining tools can identify patterns among customers and help identify the most likely customers to respond to upcoming mailing campaigns.
+
+Related to an integrated-circuit production line, an example of data mining is described in the paper "Mining IC Test Data to Optimize VLSI Testing."[31] In this paper the application of data mining and decision analysis to the problem of die-level functional test is described. Experiments mentioned in this paper demonstrate the ability of applying a system of mining historical die-test data to create a probabilistic model of patterns of die failure which are then utilized to decide in real time which die to test next and when to stop testing. This system has been shown, based on experiments with historical test data, to have the potential to improve profits on mature IC products.
+
+Given below is a list of the top eight data-mining software vendors in 2008 published in a Gartner study.[32]
+
+    * Angoss Software
+    * Infor CRM Epiphany
+    * Portrait Software
+    * SAS
+    * G-Stat
+    * SPSS
+    * ThinkAnalytics
+    * Unica
+    * Viscovery
+
+[edit] Science and engineering
+
+In recent years, data mining has been widely used in area of science and engineering, such as bioinformatics, genetics, medicine, education, and electrical power engineering.
+
+In the area of study on human genetics, the important goal is to understand the mapping relationship between the inter-individual variation in human DNA sequences and variability in disease susceptibility. In lay terms, it is to find out how the changes in an individual's DNA sequence affect the risk of developing common diseases such as cancer. This is very important to help improve the diagnosis, prevention and treatment of the diseases. The data mining technique that is used to perform this task is known as multifactor dimensionality reduction.[33]
+
+In the area of electrical power engineering, data mining techniques have been widely used for condition monitoring of high voltage electrical equipment. The purpose of condition monitoring is to obtain valuable information on the insulation's health status of the equipment. Data clustering such as self-organizing map (SOM) has been applied on the vibration monitoring and analysis of transformer on-load tap-changers(OLTCS). Using vibration monitoring, it can be observed that each tap change operation generates a signal that contains information about the condition of the tap changer contacts and the drive mechanisms. Obviously, different tap positions will generate different signals. However, there was considerable variability amongst normal condition signals for the exact same tap position. SOM has been applied to detect abnormal conditions and to estimate the nature of the abnormalities.[34]
+
+Data mining techniques have also been applied for dissolved gas analysis (DGA) on power transformers. DGA, as a diagnostics for power transformer, has been available for many years. Data mining techniques such as SOM has been applied to analyse data and to determine trends which are not obvious to the standard DGA ratio techniques such as Duval Triangle.[35]
+
+A fourth area of application for data mining in science/engineering is within educational research, where data mining has been used to study the factors leading students to choose to engage in behaviors which reduce their learning[36] and to understand the factors influencing university student retention.[37]
+
+Other examples of applying data mining technique applications are biomedical data facilitated by domain ontologies,[38] mining clinical trial data,[39] traffic analysis using SOM,[40] et cetera.
+
+[edit] See also
+
+    * Data analysis
+    * Data warehouse
+    * Pattern mining[41][clarify]
+    * Subject-based data mining
+    * Structured data analysis (statistics)
+    * Screen scraping
+    * Web-scraping_software_comparison
+
+[edit] References
+
+   1. ^ W. Frawley and G. Piatetsky-Shapiro and C. Matheus (Fall 1992). "Knowledge Discovery in Databases: An Overview". AI Magazine: pp. 213–228. ISSN 0738-4602. 
+   2. ^ D. Hand, H. Mannila, P. Smyth (2001). Principles of Data Mining. MIT Press, Cambridge, MA. ISBN 0-262-08290-X. OCLC 226126187. 
+   3. ^ a b Ellen Monk, Bret Wagner (2006). Concepts in Enterprise Resource Planning, Second Edition. Thomson Course Technology, Boston, MA. ISBN 0-619-21663-8. OCLC 224465825. 
+   4. ^ Kantardzic, Mehmed (2003). Data Mining: Concepts, Models, Methods, and Algorithms. John Wiley & Sons. ISBN 0471228524. OCLC 50055336. 
+   5. ^ "Data Mining Algorithms (Analysis Services - Data Mining)". Data Mining Algorithms (Analysis Services - Data Mining). 2008, http://msdn.microsoft.com/en-us/library/ms175595.aspx. .
+   6. ^ "Data Mining Algorithms (Analysis Services - Data Mining)". Data Mining Algorithms (Analysis Services - Data Mining). 2008, http://msdn.microsoft.com/en-us/library/ms175595.aspx. .
+   7. ^ "Data Mining Algorithms (Analysis Services - Data Mining)". Data Mining Algorithms (Analysis Services - Data Mining). 2008, http://msdn.microsoft.com/en-us/library/ms175595.aspx. .
+   8. ^ "Data Mining Algorithms (Analysis Services - Data Mining)". Data Mining Algorithms (Analysis Services - Data Mining). 2008, http://msdn.microsoft.com/en-us/library/ms175595.aspx. .
+   9. ^ "Data Mining Algorithms (Analysis Services - Data Mining)". Data Mining Algorithms (Analysis Services - Data Mining). 2008, http://msdn.microsoft.com/en-us/library/ms175595.aspx. .
+  10. ^ "Data Mining Algorithms (Analysis Services - Data Mining)". Data Mining Algorithms (Analysis Services - Data Mining). 2008, http://msdn.microsoft.com/en-us/library/ms175595.aspx. .
+  11. ^ Chip Pitts (March 15, 2007). "The End of Illegal Domestic Spying? Don't Count on It". Wash. Spec., http://www.washingtonspectator.com/articles/20070315surveillance_1.cfm. .
+  12. ^ K.A. Taipale (December 15, 2003). "Data Mining and Domestic Security: Connecting the Dots to Make Sense of Data". Colum. Sci. & Tech. L. Rev. 5 (2). SSRN 546782 / OCLC 45263753, http://www.stlr.org/cite.cgi?volume=5&article=2. .
+  13. ^ John Resig, Ankur Teredesai (2004). "A Framework for Mining Instant Messaging Services". In Proceedings of the 2004 SIAM DM Conference, http://citeseer.ist.psu.edu/resig04framework.html. .
+  14. ^ http://www.nascio.org/publications/documents/NASCIO-dataMining.pdf
+  15. ^ http://www.amstat.org/profession/index.cfm?pf=dataminingfaq&fuseaction=dataminingfaq
+  16. ^ http://www.amstat.org/profession/index.cfm?pf=dataminingfaq&fuseaction=dataminingfaq
+  17. ^ http://www.amstat.org/profession/index.cfm?pf=dataminingfaq&fuseaction=dataminingfaq
+  18. ^ http://www.nascio.org/publications/documents/NASCIO-dataMining.pdf
+  19. ^ http://www.amstat.org/profession/index.cfm?pf=dataminingfaq&fuseaction=dataminingfaq
+  20. ^ http://www.amstat.org/profession/index.cfm?pf=dataminingfaq&fuseaction=dataminingfaq
+  21. ^ http://www.nascio.org/publications/documents/NASCIO-dataMining.pdf
+  22. ^ http://www.dmreview.com/issues/20000701/2367-1.html?printer_friendly
+  23. ^ http://www.dmreview.com/issues/20000701/2367-1.html?printer_friendly
+  24. ^ http://www.nascio.org/publications/documents/NASCIO-dataMining.pdf
+  25. ^ http://www.nascio.org/publications/documents/NASCIO-dataMining.pdf
+  26. ^ Cary, Christina, Joseph H. Wen, and Pruthikrai Mahatanankoon. "Data Mining: Consumer privacy, ethical policy, and systems development practices." Human Systems Management 22 (2003): 157-68.
+  27. ^ John Wang. (2003). Data Mining: Opportunities and Challenges. Hershey, Pennsylvania: IGI Global. ISBN 978-1591400516. 
+  28. ^ John Wang. (2003). Data Mining: Opportunities and Challenges. Hershey, Pennsylvania: IGI Global. ISBN 978-1591400516. 
+  29. ^ Stephen Haag et al. (2006). Management Information Systems for the information age. Toronto: McGraw-Hill Ryerson, pp 28. ISBN 0-07-095569-7. OCLC 63194770. 
+  30. ^ Security-MSNBC report
+  31. ^ http://web.engr.oregonstate.edu/~tgd/publications/kdd2000-dlft.pdf
+  32. ^ Gareth Herschel, Gartner, Inc. (1 July 2008) http://mediaproducts.gartner.com/reprints/sas/vol5/article3/article3.html Magic Quadrant for Customer Data-Mining Applications
+  33. ^ Xingquan Zhu, Ian Davidson (2007). Knowledge Discovery and Data Mining: Challenges and Realities. Hershey, New Your, pp 18. ISBN 978-159904252-7. 
+  34. ^ A.J. McGrail, E.Gulski, and al.. "Data Mining Techniques to Asses the Condition of High Voltage Electrical Plant". CIGRE WG 15.11 of Study Committee 15. .
+  35. ^ A.J. McGrail, E.Gulski, and al.. "Data Mining Techniques to Asses the Condition of High Voltage Electrical Plant". CIGRE WG 15.11 of Study Committee 15. .
+  36. ^ R.Baker. "Is Gaming the System State-or-Trait? Educational Data Mining Through the Multi-Contextual Application of a Validated Behavioral Model". Workshop on Data Mining for User Modeling 2007. 
+  37. ^ J.F. Superby, J-P. Vandamme, N. Meskens. "Determination of factors influencing the achievement of the first-year university students using data mining methods". Workshop on Educational Data Mining 2006. 
+  38. ^ Xingquan Zhu, Ian Davidson (2007). Knowledge Discovery and Data Mining: Challenges and Realities. Hershey, New Your, pp 163–189. ISBN 978-159904252-7. 
+  39. ^ Xingquan Zhu, Ian Davidson (2007). Knowledge Discovery and Data Mining: Challenges and Realities. Hershey, New Your, pp 31–48. ISBN 978-159904252-7. 
+  40. ^ Yudong Chen, Yi Zhang, Jianming Hu, Xiang Li. "Traffic Data Analysis Using Kernel PCA and Self-Organizing Map". Intelligent Vehicles Symposium, 2006 IEEE. .
+  41. ^ Stephen Haag et al. (2006). Management Information Systems for the information age. Toronto: McGraw-Hill Ryerson, pp 28. ISBN 0-07-095569-7. OCLC 63194770. 
+
+[edit] Further reading
+
+    * Peter Cabena, Pablo Hadjnian, Rolf Stadler, Jaap Verhees, Alessandro Zanasi, Discovering Data Mining: From Concept to Implementation (1997), Prentice Hall, ISBN 0137439806
+    * Ronen Feldman and James Sanger, The Text Mining Handbook, Cambridge University Press, ISBN 9780521836579
+    * Phiroz Bhagat, Pattern Recognition in Industry, Elsevier, ISBN 0-08-044538-1
+    * Ian Witten and Eibe Frank, Data Mining: Practical Machine Learning Tools and Techniques with Java Implementations (2000), ISBN 1-55860-552-5, (see also Free Weka software)
+    * Mark F. Hornick, Erik Marcade, Sunil Venkayala: "Java Data Mining: Strategy, Standard, And Practice: A Practical Guide for Architecture, Design, And Implementation" (Broché)
+    * Weiss and Indurkhya, Predictive Data Mining, Morgan Kaufman
+    * Yike Guo and Robert Grossman, editors: High Performance Data Mining: Scaling Algorithms, Applications and Systems, Kluwer Academic Publishers, 1999
+    * Trevor Hastie, Robert Tibshirani and Jerome Friedman (2001). The Elements of Statistical Learning, Springer. ISBN 0387952845 (companion book site)
+    * Pascal Poncelet, Florent Masseglia and Maguelonne Teisseire (Editors). Data Mining Patterns: New Methods and Applications , Information Science Reference, ISBN 978-1599041629, (October 2007).
+    * Mierswa, Ingo and Wurst, Michael and Klinkenberg, Ralf and Scholz, Martin and Euler, Timm: YALE: Rapid Prototyping for Complex Data Mining Tasks, in Proceedings of the 12th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD-06), 2006.
+    * Peng, Y., Kou, G., Shi, Y. and Chen, Z. "A Systemic Framework for the Field of Data Mining and Knowledge Discovery", in Proceeding of workshops on The Sixth IEEE International Conference on Data Mining Technique (ICDM), 2006
+
+[edit] External links
+
+    * Data Mining at the Open Directory Project
+    * Data Mining with Artificial Neural Networks
+    * European Centre for Soft Computing

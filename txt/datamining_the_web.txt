@@ -1,0 +1,193 @@
+DEFINING DATA MINING THE WEB
+By data mining the Web, we refer to the application of data mining methodologies,
+techniques, and models to the variety of data forms, structures, and usage patterns
+that comprise the World Wide Web. As the subtitle indicates, we are interested in
+uncovering patterns and trends in the content, structure, and use of the Web. A good
+definition of data mining is that in Principles of Data Mining by David Hand, Heikki
+Mannila, and Padhraic Smyth (MIT Press, Cambridge, MA, 2001): “Data mining is
+the analysis of (often large) observational data sets to find unsuspected relationships
+and to summarize the data in novelways that are both understandable and useful to the
+data owner.” Data Mining the Web: Uncovering Patterns in Web Content, Structure,
+and Usage demonstrates how to apply data mining methods and models toWeb-based
+data forms.
+THE DATA MINING BOOK SERIES
+This book represents the third volume in a data mining book series. The first volume
+in this series, Discovering Knowledge in Data: An Introduction to Data Mining, by
+Daniel Larose, appeared in 2005, and introduced the reader to this rapidly growing
+field of data mining. The second volume in the series, Data Mining Methods and
+Models, by Daniel Larose, appeared in 2006, and explores the process of data mining
+from the point of view of model building—the development of complex and powerful
+predictive models that can deliver actionable results for a wide range of business
+and research problems. Although Data Mining the Web: Uncovering Patterns in Web
+Content, Structure, and Usage serves well as a stand-alone resource for learning how
+to apply data mining techniques to Web-based data, reference is sometimes made to
+more complete coverage of certain topics in the earlier volumes.
+HOW THE BOOK IS STRUCTURED
+The book is presented in three parts.
+Part I: Web Structure Mining
+In Part I we discuss basic ideas and techniques for extracting text information from the
+Web, including collecting and indexing web documents and searching and ranking
+xi
+xii PREFACE
+web pages by their textual content and hyperlink structure. Part I contains two chapters,
+Chapter 1, Information Retrieval and Web Search; and Chapter 2, Hyperlink-Based
+Ranking.
+Part II: Web Content Mining
+Machine learning and data mining approaches organize the Web by content and thus
+respond directly to the major challenge of turning web data into web knowledge. InPart
+IIwefocus on two approaches to organizing theWeb, clustering and classification. Part
+II consists of three chapters: Chapter 3, Clustering; Chapter 4, Evaluating Clustering;
+and Chapter 5, Classification.
+Part III: Web Usage Mining
+Web usage mining refers to the application of data mining methods for uncovering
+usage patterns from Web data. Web usage mining differs from web structure mining
+and web content mining in that web usage mining reflects the behavior of humans as
+they interact with the Internet. Part III consists of four chapters: Chapters 6, Introduction
+to Web Usage Mining; Chapter 7, Preprocessing for Web Usage Mining; Chapter
+8, Exploratory Data Analysis for Web Usage Mining; and Chapter 9, Modeling for
+Web Usage Mining: Clustering, Association, and Classification.
+WHY THE BOOK IS NEEDED
+The book provides the reader with:
+ The models and techniques to uncover hidden nuggets of information in Webbased
+data
+ Insight into how web mining algorithms really work
+ The experience of actually performing web mining on real-world data sets
+“WHITE-BOX” APPROACH: UNDERSTANDING
+THE UNDERLYING ALGORITHMIC AND
+MODEL STRUCTURES
+The best way to avoid costly errors stemming from a blind black-box approach to data
+mining, is to apply, instead, a white-box methodology, which emphasizes an understanding
+of the algorithmic and statistical model structures underlying the software.
+The book, applies this white-box approach by:
+ Walking the reader through various algorithms
+ Providing examples of the operation of web mining algorithms on actual large
+data sets
+PREFACE xiii
+ Testing the reader’s level of understanding of the concepts and algorithms
+ Providing an opportunity for the reader to do some real web mining on large
+Web-based data sets
+AlgorithmWalk-Throughs
+The book walks the reader through the operations and nuances of various algorithms,
+using small sample data sets, so that the reader gets a true appreciation of what is
+really going on inside an algorithm. For example, in Chapter 1, we demonstrate the
+nuts and bolts of relevance ranking, similarity searching, and other topics, using a
+particular small web data set. The reader can perform the same analysis in parallel,
+and therefore understanding is enhanced.
+Applications of Algorithms and Models to Large Data Sets
+The book provides examples of the application of the various algorithms and models
+on actual large data sets. For example, in Chapter 7 data cleaning, de-spidering,
+session identification, and other tasks are carried out on two real-world large web log
+databases, from the Web sites for NASA and Central Connecticut State University.
+All data sets used throughout the book are available for free download from the book
+series Web site, www.dataminingconsultant.com.
+Chapter Exercises: Checking to Make Sure That You
+Understand It
+The book includes over 100 chapter exercises, which allow readers to assess their
+depth of understanding of the material, as well as to have a little fun playing with
+numbers and data. These include exercises designed to (1) clarify some of the more
+challenging concepts in data mining, and (2) challenge the reader to apply the particular
+data mining algorithm to a small data set and, step by step, to arrive at a
+computationally sound solution. For example, in Chapter 4 readers are asked to run
+a series of experiments comparing the efficacy of a variety of clustering algorithms
+applied to the “Top 100 Websites” data set.
+Hands-on Analysis: Learn Data Mining by Doing Data Mining
+Nearly every chapter provides the reader with hands-on analysis problems, representing
+an opportunity for the reader to apply his or her newly acquired data mining
+expertise to solving real problems using large data sets. Many people learn by doing.
+The book provides a framework by which the reader can learn data mining by doing
+data mining. For example, in Chapter 8 readers are challenged to provide detailed
+reports and summaries for real-world web log data. The 34 tasks include finding
+the average time per page view, constructing a table of the most popular directories,
+and so on.
+xiv PREFACE
+DATA MINING AS A PROCESS
+The book continues the coverage of data mining as a process. The particular standard
+process used is the CRISP-DM framework: the cross-industry standard process for
+data mining. CRISP-DM demands that data mining be seen as an entire process, from
+communication of the business problem through data collection and management,
+data preprocessing, model building, model evaluation, and finally, model deployment.
+Therefore, this book is not only for analysts and managers, but also for data
+management professionals, database analysts, decision makers, and others whowould
+like to leverage their repositories of Web-based data.
+THE SOFTWARE
+The software used in this book includes the following:
+ WEKA open-source data mining software
+ Clementine data mining software suite.
+The Weka (Waikato Environment for Knowledge Analysis) machine learning
+workbench is open-source software issued under the GNU General Public
+License, which includes a collection of tools for completing many data mining
+tasks. The book uses Weka throughout Parts I and II. For more information
+regarding Weka, see http://www.cs.waikato.ac.nz/~ml/. Clementine
+(http://www.spss.com/clementine/) is one of the most widely used data mining
+software suites and is distributed by SPSS. Clementine is used throughout Part
+III.
+THE COMPANION WEB SITE:
+www.dataminingconsultant.com
+The reader will find supporting materials for both this book and the
+other data mining books in this series at the companion Web site,
+www.dataminingconsultant.com. There one may download the many data sets
+used in the book, so that the reader may develop a hands-on feeling for the analytic
+methods and models encountered throughout the book. Errata are also available, as
+is a comprehensive set of data mining resources, including links to data sets, data
+mining groups, and research papers.
+The real power of the companion Web site is available to faculty adopters of
+the textbook, who will have access to the following resources:
+ Solutions to all the exercises, including hands-on analyses
+ Powerpoint presentations of each chapter, ready for deployment in the classroom
+PREFACE xv
+ Sample data mining course projects, written by the authors for use in their own
+courses, and ready to be adapted for your course
+ Real-world data sets, to be used with the course projects.
+ Multiple-choice chapter quizzes
+ Chapter-by-chapter web resources
+DATA MINING THE WEB AS A TEXTBOOK
+The book naturally fits the role of a textbook for an introductory course in web mining.
+Instructors may appreciate:
+ The “white-box” approach, emphasizing an understanding of the underlying
+algorithmic structures
+? Algorithm walk-throughs
+? Application of the algorithms to large data sets
+? Chapter exercises
+? Hands-on analysis
+ The logical presentation, flowing naturally from the CRISP-DM standard process
+and the set of web mining tasks
+ The companionWeb site, providing the array of resources for adopters detailed
+above
+The book is appropriate for advanced undergraduate or graduate-level courses.
+An introductory statistics coursewould be nice, but is not required. No prior computer
+programming or database expertise is required.
+ACKNOWLEDGMENTS
+The material for web content and structure mining is based on the web mining course
+that I developed and taught for the graduate CIT program at Central Connecticut
+State University. The student projects and some exercises from this course were then
+used in the artificial intelligence course that I taught for the CS program at the same
+school. Some material from my data mining and machine learning courses taught for
+the data mining program at CCSU is also included. I am grateful to my students from
+all these courses for their inspirational enthusiasm and valuable feedback. The book
+was written while I was on sabbatical leave, spent in my home country, Bulgaria,
+sharing my time between family and writing. I wish to thank my children, Teodora
+and Kalin, and my wife, Irena, for their patience and understanding during that time.
+Zdravko Markov, Ph.D.
+Department of Computer Science
+Central Connecticut State University
+www.cs.ccsu.edu/~markov/
+xvi PREFACE
+I would like to thank all the folks at Wiley, especially editor Paul Petralia,
+for their guidance and support. Je suis ´egalement reconnaissant `a ma r´edactrice
+et amie Val Moliere, qui a insist´e pour que cette s´erie de livres devienne r´ealit´e.
+I also wish to thank Dr. Chun Jin, Dr. Daniel S. Miller, Dr. Roger Bilisoly, Dr. Darius
+Dziuda, and Dr. Krishna Saha, my colleagues in the Master of Science in data mining
+program at Central Connecticut State University, Dr. Timothy Craine, Chair of
+the Department of Mathematical Sciences at CCSU, Dr. Dipak K. Dey, Chair of the
+Department of Statistics at the University of Connecticut, and Dr. John Judge, Chair
+of the Department of Mathematics atWestfield State College. Thanks to my daughter,
+Chantal, for her precious love and gentle insanity. Thanks to my twin children, Tristan
+and Ravel, for sharing the computer and for sharing their true perspective. Above all,
+I extend my deepest gratitude to my darling wife, Debra J. Larose, for her support,
+understanding, and love. “Say you’ll share with me one love, one lifetime. . . .”
+Daniel T. Larose, Ph.D.
+Professor of Statistics
+Director, Data Mining @CCSU
+Department of Mathematical Sciences
+Central Connecticut State University
+www.math.ccsu.edu/larose

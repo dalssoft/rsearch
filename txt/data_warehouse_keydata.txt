@@ -1,0 +1,24 @@
+This Data Warehousing and Business Intelligence site aims to help people get a good high-level understanding of what it takes to implement a successful data warehouse project. A lot of the information is from my personal experience as a business intelligence professional, both as a client and as a vendor.
+
+This site is divided into five main areas.
+
+- Tools: The selection of business intelligence tools and the selection of the data warehousing team. Tools covered are:
+
+    * Database, Hardware
+    * ETL (Extraction, Transformation, and Loading)
+    * OLAP
+    * Reporting
+    * Metadata 
+
+- Steps: This selection contains the typical milestones for a data warehousing project, from requirement gathering to production rollout and beyond. I also offer my observations on the data warehousing field.
+
+- Business Intelligence: Business intelligence is closely related to data warehousing. This section discusses business intelligence, as wellas the relationship between business intelligence and data warehousing.
+
+- Concepts: This section discusses several concepts particular to the data warehousing field. Topics include:
+
+    * Dimensional Data Model
+    * Slowly Changing Dimension
+    * Conceptual, Logical, and Physical Data Model
+    * What is OLAP
+    * MOLAP, ROLAP, and HOLAP
+    * Bill Inmon vs. Ralph Kimball

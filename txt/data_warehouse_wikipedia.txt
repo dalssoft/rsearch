@@ -1,0 +1,205 @@
+Data warehouse
+From Wikipedia, the free encyclopedia
+Jump to: navigation, search
+
+Data warehouse is a repository of an organization's electronically stored data. Data warehouses are designed to facilitate reporting and analysis[1].
+
+This classic definition of the data warehouse focuses on data storage. However, the means to retrieve and analyze data, to extract, transform and load data, and to manage the data dictionary are also considered essential components of a data warehousing system. Many references to data warehousing use this broader context. Thus, an expanded definition for data warehousing includes business intelligence tools, tools to extract, transform, and load data into the repository, and tools to manage and retrieve metadata.
+
+In contrast to data warehouses are operational systems which perform day-to-day transaction processing.
+Contents
+[hide]
+
+    * 1 History
+          o 1.1 The future of data warehousing
+    * 2 Data warehouse architecture
+    * 3 Normalized versus dimensional approach for storage of data
+    * 4 Conforming information
+    * 5 Top-down versus bottom-up design methodologies
+          o 5.1 Bottom-up design
+          o 5.2 Top-down design
+          o 5.3 Hybrid design
+    * 6 Data warehouses versus operational systems
+    * 7 Evolution in organization use of data warehouses
+    * 8 Benefits of data warehousing
+    * 9 Disadvantages of data warehouses
+    * 10 See also
+    * 11 References
+    * 12 Further reading
+    * 13 External links
+
+[edit] History
+
+The concept of data warehousing dates back to the late 1980s [2] when IBM researchers Barry Devlin and Paul Murphy developed the "business data warehouse". In essence, the data warehousing concept was intended to provide an architectural model for the flow of data from operational systems to decision support environments. The concept attempted to address the various problems associated with this flow - mainly, the high costs associated with it. In the absence of a data warehousing architecture, an enormous amount of redundancy of information was required to support the multiple decision support environments that usually existed. In larger corporations it was typical for multiple decision support environments to operate independently. Each environment served different users but often required much of the same data. The process of gathering, cleaning and integrating data from various sources, usually long existing operational systems (usually referred to as legacy systems), was typically in part replicated for each environment. Moreover, the operational systems were frequently reexamined as new decision support requirements emerged. Often new requirements necessitated gathering, cleaning and integrating new data from the operational systems that were logically related to prior gathered data.
+
+Based on analogies with real-life warehouses, data warehouses were intended as large-scale collection/storage/staging areas for corporate data. Data could be retrieved from one central point or data could be distributed to "retail stores" or "data marts" which were tailored for ready access by users.
+
+Key developments in early years of data warehousing were:
+
+    * 1960s - General Mills and Dartmouth College, in a joint research project, develop the terms dimensions and facts.[3]
+    * 1970s - ACNielsen and IRI provide dimensional data marts for retail sales.[3]
+    * 1983 - Teradata introduces a database management system specifically designed for decision support.
+    * 1988 - Barry Devlin and Paul Murphy publish the article An architecture for a business and information systems in IBM Systems Journal where they introduce the term "business data warehouse".
+    * 1990 - Red Brick Systems introduces Red Brick Warehouse, a database management system specifically for data warehousing.
+    * 1991 - Prism Solutions introduces Prism Warehouse Manager, software for developing a data warehouse.
+    * 1991 - Bill Inmon publishes the book Building the Data Warehouse.
+    * 1995 - The Data Warehousing Institute, a for-profit organization that promotes data warehousing, is founded.
+    * 1996 - Ralph Kimball publishes the book The Data Warehouse Toolkit.
+    * 1997 - Oracle 8, with support for star queries, is released
+
+[edit] The future of data warehousing
+
+Data warehousing, like any technology niche, has a history of innovations that did not receive market acceptance.[4]
+
+A 2007 Gartner Group paper predicted the following technologies could be disruptive to the business intelligence market .[5]
+
+    * Service Oriented Architecture
+    * Search capabilities integrated into reporting and analysis technology
+    * Software as a Service
+    * Analytic tools that work in memory
+    * Visualization
+
+Another prediction is that data warehouse performance will continue to be improved by use of data warehouse appliances, many of which incorporate the developments in the aforementioned Gartner Group report.
+
+
+[edit] Data warehouse architecture
+
+Architecture, in the context of an organization's data warehousing efforts, is a conceptualization of how the data warehouse is built. There is no right or wrong architecture. The worthiness of the architecture can be judged in how the conceptualization aids in the building, maintenance, and usage of the data warehouse.
+
+One possible simple conceptualization of a data warehouse architecture consists of the following interconnected layers:
+
+Operational database layer
+    The source data for the data warehouse - An organization's EIS systems fall into this layer.
+Informational access layer
+    The data accessed for reporting and analyzing and the tools for reporting and analyzing data - Business intelligence tools fall into this layer. And the Inmon-Kimball differences about design methodology, discussed later in this article, have to do with this layer.
+Data access layer
+    The interface between the operational and informational access layer - Tools to extract, transform, load data into the warehouse fall into this layer.
+Metadata layer
+    The data directory - This is often usually more detailed than an operational system data directory. There are dictionaries for the entire warehouse and sometimes dictionaries for the data that can be accessed by a particular reporting and analysis tool.
+
+[edit] Normalized versus dimensional approach for storage of data
+
+There are two leading approaches to storing data in a data warehouse - the dimensional approach and the normalized approach.
+
+In the dimensional approach, transaction data are partitioned into either "facts", which are generally numeric transaction data, and "dimensions", which are the reference information that gives context to the facts. For example, a sales transaction can be broken up into facts such as the number of products ordered and the price paid for the products, and into dimensions such as order date, customer name, product number, order ship-to and bill-to locations, and salesperson responsible for receiving the order. A key advantage of a dimensional approach is that the data warehouse is easier for the user to understand and to use. Also, the retrieval of data from the data warehouse tends to operate very quickly. The main disadvantages of the dimensional approach are: 1) In order to maintain the integrity of facts and dimensions, loading the data warehouse with data from different operational systems is complicated, and 2) It is difficult to modify the data warehouse structure if the organization adopting the dimensional approach changes the way in which it does business.
+
+In the normalized approach, the data in the data warehouse are stored following, to a degree, the Codd normalization rule. Tables are grouped together by subject areas that reflect general data categories (e.g., data on customers, products, finance, etc.) The main advantage of this approach is that it is straightforward to add information into the database. A disadvantage of this approach is that, because of the number of tables involved, it can be difficult for users both to 1) join data from different sources into meaningful information and then 2) access the information without a precise understanding of the sources of data and of the data structure of the data warehouse.
+
+These approaches are not exact opposites of each other. Dimensional approaches can involve normalizing data to a degree.
+
+[edit] Conforming information
+
+Another important decision in designing a data warehouse is which data to conform and how to conform the data. For example, one operational system feeding data into the data warehouse may use "M" and "F" to denote sex of an employee while another operational system may use "Male" and "Female". Though this is a simple example, much of the work in implementing a data warehouse is devoted to making similar meaning data consistent when they are stored in the data warehouse. Typically, extract, transform, load tools are used in this work. See Master Data Management.
+
+[edit] Top-down versus bottom-up design methodologies
+
+[edit] Bottom-up design
+
+Ralph Kimball, a well-known author on data warehousing, [6] is a proponent of an approach frequently considered as bottom-up [7], to data warehouse design. In the so-called bottom-up approach data marts are first created to provide reporting and analytical capabilities for specific business processes. Data marts contain atomic data and, if necessary, summarized data. These data marts can eventually be unioned together to create a comprehensive data warehouse. The combination of data marts is managed through the implementation of what Kimball calls "a data warehouse bus architecture".[8]
+
+Business value can be returned as quickly as the first data marts can be created. Maintaining tight management over the data warehouse bus architecture is fundamental to maintaining the integrity of the data warehouse. The most important management task is making sure dimensions among data marts are consistent. In Kimball words, this means that the dimensions "conform".
+
+[edit] Top-down design
+
+Bill Inmon, one of the first authors on the subject of data warehousing, has defined a data warehouse as a centralized repository for the entire enterprise.[8] Inmon is one of the leading proponents of the top-down approach to data warehouse design, in which the data warehouse is designed using a normalized enterprise data model. "Atomic" data, that is, data at the lowest level of detail, are stored in the data warehouse. Dimensional data marts containing data needed for specific business processes or specific departments are created from the data warehouse. In the Inmon vision the data warehouse is at the center of the "Corporate Information Factory" (CIF), which provides a logical framework for delivering business intelligence (BI) and business management capabilities. The CIF is driven by data provided from business operations
+
+Inmon states that the data warehouse is:
+
+Subject-oriented 
+    The data in the data warehouse is organized so that all the data elements relating to the same real-world event or object are linked together.
+Time-variant 
+    The changes to the data in the data warehouse are tracked and recorded so that reports can be produced showing changes over time.
+Non-volatile 
+    Data in the data warehouse is never over-written or deleted - once committed, the data is static, read-only, and retained for future reporting.
+Integrated 
+    The data warehouse contains data from most or all of an organization's operational systems and this data is made consistent.
+
+The top-down design methodology generates highly consistent dimensional views of data across data marts since all data marts are loaded from the centralized repository. Top-down design has also proven to be robust against business changes. Generating new dimensional data marts against the data stored in the data warehouse is a relatively simple task. The main disadvantage to the top-down methodology is that it represents a very large project with a very broad scope. The up-front cost for implementing a data warehouse using the top-down methodology is significant, and the duration of time from the start of project to the point that end users experience initial benefits can be substantial. In addition, the top-down methodology can be inflexible and unresponsive to changing departmental needs during the implementation phases.[8]
+
+[edit] Hybrid design
+
+Over time it has become apparent to proponents of bottom-up and top-down data warehouse design that both methodologies have benefits and risks. Hybrid methodologies have evolved to take advantage of the fast turn-around time of bottom-up design and the enterprise-wide data consistency of top-down design.
+
+[edit] Data warehouses versus operational systems
+
+Operational systems are optimized for preservation of data integrity and speed of recording of business transactions through use of database normalization and an entity-relationship model. Operational system designers generally follow the Codd rules of data normalization in order to ensure data integrity. Codd defined five increasingly stringent rules of normalization. Fully normalized database designs (that is, those satisfying all five Codd rules) often result in information from a business transaction being stored in dozens to hundreds of tables. Relational databases are efficient at managing the relationships between these tables. The databases have very fast insert/update performance because only a small amount of data in those tables is affected each time a transaction is processed. Finally, in order to improve performance, older data are usually periodically purged from operational systems.
+
+Data warehouses are optimized for speed of data retrieval. Frequently data in data warehouses are denormalised via a dimension-based model. Also, to speed data retrieval, data warehouse data are often stored multiple times - in their most granular form and in summarized forms called aggregates. Data warehouse data are gathered from the operational systems and held in the data warehouse even after the data has been purged from the operational systems.
+
+[edit] Evolution in organization use of data warehouses
+
+Organizations generally start off with relatively simple use of data warehousing. Over time, more sophisticated use of data warehousing evolves. The following general stages of use of the data warehouse can be distinguished:
+
+Off line Operational Database 
+    Data warehouses in this initial stage are developed by simply copying the data of an operational system to another server where the processing load of reporting against the copied data does not impact the operational system's performance.
+Off line Data Warehouse 
+    Data warehouses at this stage are updated from data in the operational systems on a regular basis and the data warehouse data is stored in a data structure designed to facilitate reporting.
+Real Time Data Warehouse 
+    Data warehouses at this stage are updated every time an operational system performs a transaction (e.g., an order or a delivery or a booking.)
+Integrated Data Warehouse 
+    Data warehouses at this stage are updated every time an operational system performs a transaction. The data warehouses then generate transactions that are passed back into the operational systems.
+Frontline Data Warehouse 
+    Data warehouses at this stage provide frontline applications and users with immediate access to a full source data-set that reflects the current state of the business, providing continuous availably, and the ability to analyze data in-place without moving data to a middle-tier analytics engine.
+
+[edit] Benefits of data warehousing
+
+Some of the benefits that a data warehouse provides are as follows: [9][10]
+
+    * A data warehouse provides a common data model for all data of interest regardless of the data's source. This makes it easier to report and analyze information than it would be if multiple data models were used to retrieve information such as sales invoices, order receipts, general ledger charges, etc.
+    * Prior to loading data into the data warehouse, inconsistencies are identified and resolved. This greatly simplifies reporting and analysis.
+    * Information in the data warehouse is under the control of data warehouse users so that, even if the source system data is purged over time, the information in the warehouse can be stored safely for extended periods of time.
+    * Because they are separate from operational systems, data warehouses provide retrieval of data without slowing down operational systems.
+    * Data warehouses can work in conjunction with and, hence, enhance the value of operational business applications, notably customer relationship management (CRM) systems.
+    * Data warehouses facilitate decision support system applications such as trend reports (e.g., the items with the most sales in a particular area within the last two years), exception reports, and reports that show actual performance versus goals.
+
+[edit] Disadvantages of data warehouses
+
+There are also disadvantages to using a data warehouse. Some of them are:
+
+    * Over their life, data warehouses can have high costs. The data warehouse is usually not static. Maintenance costs are high.
+    * Data warehouses can get outdated relatively quickly. There is a cost of delivering suboptimal information to the organization. New data warehouses solve this by using a technology called Change data capture.
+    * There is often a fine line between data warehouses and operational systems. Duplicate, expensive functionality may be developed. Or, functionality may be developed in the data warehouse that, in retrospect, should have been developed in the operational systems and vice versa..
+
+[edit] See also
+
+    * Business Intelligence
+    * Business intelligence tools
+    * Data integration
+    * Data mart
+    * Data mining
+    * Data mining agent
+    * Data warehouse appliance
+    * Database Management System (DBMS)
+    * Decision support
+    * Executive Information System (EIS)
+    * Extract, transform, and load (ETL)
+    * Master Data Management (MDM)
+    * On Line Analytical Processing (OLAP)
+    * Online transaction processing (OLTP)
+    * Operational Data Store (ODS)
+    * Screen scraping
+    * Snowflake schema
+    * Star schema
+    * Data as a service (DaaS)
+
+[edit] References
+
+   1. ^ Inmon, W.H. Tech Topic: What is a Data Warehouse? Prism Solutions. Volume 1. 1995.
+   2. ^ "The Story So Far" (2002-04-15). Retrieved on 2008-09-21.
+   3. ^ a b Kimball 2002, pg. 16
+   4. ^ Pendse, Nigel and Bange, Carsten "The Missing Next Big Things", http://www.olapreport.com/Faileddozen.htm
+   5. ^ Schlegel, Kurt "Emerging Technologies Could Prove Disruptive to the Business Intelligence Market", Gartner Group. July 6, 2007
+   6. ^ Kimball 2002, pg. 310
+   7. ^ "The Bottom-Up Misnomer" (2003-09-17). Retrieved on 2008-11-05.
+   8. ^ a b c Ericsson 2004, pp. 28-29
+   9. ^ Yang, Jun. WareHouse Information Prototype at Stanford (WHIPS). [1]. Stanford University. July 7, 1998.
+  10. ^ Caldeira, C. "Data Warehousing - Conceitos e Modelos". Edições Sílabo. 2008. ISBN 978-972-618-479-9
+
+	This article needs additional citations for verification.
+Please help improve this article by adding reliable references. Unsourced material may be challenged and removed. (February 2008)
+
+[edit] Further reading
+
+    * Davenport, Thomas H. and Harris, Jeanne G. Competing on Analytics: The New Science of Winning (2007) Harvard Business School Press. ISBN 978-1422103326
+    * Ericsson, Robert. Building Business Intelligence Applications with .NET (2004) Charles River Media. ISBN 978-1584502715
+    * Kimball, Ralph and Ross, Margy. The Data Warehouse Toolkit Second Edition (2002) John Wiley and Sons, Inc. ISBN 0-471-20024-7
